@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio Website of Suyog Shilkar" />
+    <meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
+    <meta name="author" content="Suyog Shilkar" />
+    <title>Suyog Shilkar | Personal Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased selection:bg-rose-100 selection:text-rose-900">
+
+    <div class="cursor hidden md:block"></div>
+
+    <div id="loader">
+        <div class="animate-pulse flex items-center gap-2">
+            <span class="color text-6xl font-bold">Suyog</span> <span class="text-6xl">Shilkar</span>
+        </div>
+    </div>
+
+    <div id="breaker"></div>
+    <div id="breaker-two"></div>
+
+    <div id="navigation-content">
+        <div class="absolute top-8 right-8 cursor-pointer text-white text-5xl hover:rotate-90 transition-transform duration-300" id="nav-close">&times;</div>
+        <div class="logo absolute top-8 left-8 text-white font-bold text-2xl tracking-widest">
+            SUYOG<span class="color">.</span>
+        </div>
+        <div class="navigation-links">
+            <a href="#header" data-text="HOME" class="nav-link">HOME</a>
+            <a href="#about" data-text="ABOUT" class="nav-link">ABOUT</a>
+            <a href="#skills" data-text="SKILLS" class="nav-link">SKILLS</a>
+            <a href="#portfolio" data-text="PROJECTS" class="nav-link">PROJECTS</a>
+            <a href="#contact" data-text="CONTACT" class="nav-link">CONTACT</a>
+        </div>
+    </div>
+
+    <div id="navigation-bar">
+        <div class="menubar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="color-changer">
+        <div class="color-panel">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <h3 class="font-bold mb-4 text-gray-700 border-b pb-2">Theme Colors</h3>
+        <div class="colors">
+            <ul>
+                <li><a style="background: #e65f78;" onclick="changeColor('#e65f78')" title="Red"></a></li>
+                <li><a style="background: #9b59b6;" onclick="changeColor('#9b59b6')" title="Purple"></a></li>
+                <li><a style="background: #3498db;" onclick="changeColor('#3498db')" title="Blue"></a></li>
+                <li><a style="background: #2ecc71;" onclick="changeColor('#2ecc71')" title="Green"></a></li>
+                <li><a style="background: #f1c40f;" onclick="changeColor('#f1c40f')" title="Yellow"></a></li>
+                <li><a style="background: #e67e22;" onclick="changeColor('#e67e22')" title="Orange"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="header" class="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gray-50">
+        <canvas id="particles"></canvas>
+        <div class="container mx-auto px-6 relative z-10 flex flex-wrap items-center h-full">
+            <div class="w-full md:w-1/2 header-content-box pt-10 px-4">
+                <div class="mb-2 text-xl font-medium text-gray-500">Hello, I'm</div>
+                <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tight leading-none">
+                    <span class="color">Suyog</span> Shilkar
+                </h1>
+                <h2 class="text-2xl md:text-4xl mb-8 font-light text-gray-700">
+                    I am a <span class="txt-rotate color font-semibold" data-period="1200" data-rotate='[ "Frontend Developer.", "Creative Designer.", "Programmer." ]'></span>
+                </h2>
+
+                <div class="social-links mb-10 text-2xl flex gap-6">
+                    <a href="#" class="hover:text-[var(--main-color)] hover:-translate-y-1 transform transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-[var(--main-color)] hover:-translate-y-1 transform transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-[var(--main-color)] hover:-translate-y-1 transform transition-all"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-[var(--main-color)] hover:-translate-y-1 transform transition-all"><i class="fab fa-twitter"></i></a>
+                </div>
+
+                <div class="flex gap-4">
+                     <a href="mailto:suyogshilkar67@gmail.com" class="px-8 py-3 bg-main text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2"><i class="fas fa-envelope"></i> Email Me</a>
+                     <a href="tel:+917770036393" class="px-8 py-3 border-2 border-main text-[var(--main-color)] rounded-full font-medium hover:bg-main hover:text-white transition-all flex items-center gap-2"><i class="fas fa-phone"></i> Call Me</a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 header-image hidden md:flex justify-center h-full items-end relative">
+                <div class="absolute w-[600px] h-[600px] bg-[var(--main-color)] opacity-5 rounded-full blur-3xl -z-10 bottom-[-100px]"></div>
+                <img src="image\hero-image.jpg" alt="Suyog Shilkar" class="h-[85%] object-cover object-top drop-shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" style="mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+            <a href="#about" class="text-gray-400 hover:text-[var(--main-color)] cursor-pointer"><i class="fas fa-chevron-down text-2xl"></i></a>
+        </div>
+    </div>
+
+    <div id="about" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-5/12 mb-12 md:mb-0 px-4">
+                    <div class="relative group">
+                        <div class="absolute top-4 left-4 w-full h-full border-4 border-main rounded-lg -z-0 transition-all duration-300 group-hover:top-2 group-hover:left-2"></div>
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="About Image" class="rounded-lg shadow-2xl w-full relative z-10 bg-white object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-7/12 px-6 md:pl-16">
+                    <div class="mb-6">
+                        <span class="text-[var(--main-color)] font-bold tracking-wider uppercase text-sm">Discover</span>
+                        <h2 class="text-4xl font-bold mt-2">About <span class="color">Me</span></h2>
+                        <span class="text-gray-400 font-light text-lg">Get to Know <span class="color">me.</span></span>
+                    </div>
+
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">I'm creative <span class="color">Frontend developer</span></h4>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                        Aspiring and detail-oriented Programmer with a solid foundation in Web development, honed through rigorous academic coursework and hands-on projects.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                         Proficient in multiple programming languages including HTML5, CSS3, Javascript, React.js, Python.
+                    </p>
+
+                    <div class="mt-8">
+                        <a href="#" class="inline-block px-8 py-3 bg-main text-white rounded shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            Download <span class="font-bold">CV</span> <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="py-24 bg-[var(--bg-alt)]">
+        <div class="container mx-auto px-6">
+             <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold uppercase relative inline-block">My <span class="color">Skills</span>
+                    <span class="block w-20 h-1 bg-main mx-auto mt-4 rounded"></span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 px-4 md:px-20">
+                <div class="skill-item">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold text-gray-700 text-lg">HTML</span>
+                        <span class="font-bold color counter text-lg" data-target="100">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0;" data-width="100%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold text-gray-700 text-lg">CSS</span>
+                        <span class="font-bold color counter text-lg" data-target="95">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0;" data-width="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold text-gray-700 text-lg">Javascript</span>
+                        <span class="font-bold color counter text-lg" data-target="90">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0;" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold text-gray-700 text-lg">Bootstrap</span>
+                        <span class="font-bold color counter text-lg" data-target="90">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0;" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold text-gray-700 text-lg">React.js</span>
+                        <span class="font-bold color counter text-lg" data-target="85">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0;" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold text-gray-700 text-lg">Git/Github</span>
+                        <span class="font-bold color counter text-lg" data-target="85">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0;" data-width="85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold uppercase relative inline-block">My <span class="color">Projects</span>
+                    <span class="block w-20 h-1 bg-main mx-auto mt-4 rounded"></span>
+                </h2>
+                <p class="text-gray-500 mt-4 text-lg">Some Of My <span class="color">Works</span></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-[var(--main-color)] bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-10">
+                            <a href="https://suyogshilkar67.github.io/InsightIQ--SaaS-Landing-Page/" class="px-6 py-2 bg-white text-[var(--main-color)] font-bold rounded-full transform scale-50 group-hover:scale-100 transition duration-300">View Project</a>
+                        </div>
+                        <img src="image\InsightIQ MacBook Pro Mockup.jpg" alt="Doctor Appointment" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-3 text-gray-800">InsightIQ – SaaS Landing Page</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed flex-1">Designed and developed a responsive landing page for a SaaS analytics platform using HTML, CSS, and JavaScript. Implemented a mobile-first design strategy to ensure visual consistency and functionality across desktops, tablets, and mobile devices. Developed interactive features including dynamic pricing tables, smooth-scrolling navigation, and engaging call-to-action sections to drive user conversion. Enhanced proficiency in frontend development, modern UI/UX design principles, and web performance optimization.</p>
+                        <div class="pt-4 border-t border-gray-100">
+                             <a href="https://suyogshilkar67.github.io/InsightIQ--SaaS-Landing-Page/" class="text-[var(--main-color)] font-bold text-sm hover:underline flex items-center gap-1">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-[var(--main-color)] bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-10">
+                            <a href="https://suyogshilkar67.github.io/Modern-Fashion-E-Commerce-Website/" class="px-6 py-2 bg-white text-[var(--main-color)] font-bold rounded-full transform scale-50 group-hover:scale-100 transition duration-300">View Project</a>
+                        </div>
+                        <img src="image\MODA Fashion E-commerce 3D Mockup.jpg" alt="Health Care" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-3 text-gray-800">Modern Fashion E-Commerce Website</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed flex-1">Designed and developed a responsive e-commerce website for a modern fashion brand using HTML, CSS, and JavaScript. Implemented a mobile-first design strategy to ensure seamless shopping experiences across desktops, tablets, and mobile devices. Developed interactive features including product showcase sections, smooth-scrolling navigation, and engaging call-to-action elements to enhance user engagement and drive conversions. Enhanced proficiency in frontend development, modern UI/UX design principles, and web performance optimization for online retail platforms.</p>
+                        <div class="pt-4 border-t border-gray-100">
+                             <a href="https://suyogshilkar67.github.io/Modern-Fashion-E-Commerce-Website/" class="text-[var(--main-color)] font-bold text-sm hover:underline flex items-center gap-1">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-[var(--main-color)] bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-10">
+                            <a href="#" class="px-6 py-2 bg-white text-[var(--main-color)] font-bold rounded-full transform scale-50 group-hover:scale-100 transition duration-300">View Project</a>
+                        </div>
+                        <img src="image\Modern Portfolio Website Tech Illustration.jpg" alt="Portfolio" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-3 text-gray-800">Interactive Portfolio Website</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed flex-1">Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills and projects. Implemented responsive design principles to ensure compatibility across devices. Features include an interactive UI, project descriptions, and contact forms for potential employers.</p>
+                        <div class="pt-4 border-t border-gray-100">
+                             <a href="#" class="text-[var(--main-color)] font-bold text-sm hover:underline flex items-center gap-1">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="py-24 bg-[var(--bg-alt)]">
+        <div class="container mx-auto px-6">
+             <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold uppercase relative inline-block">Contact <span class="color">Me</span>
+                    <span class="block w-20 h-1 bg-main mx-auto mt-4 rounded"></span>
+                </h2>
+                <p class="text-gray-500 mt-4 text-lg"><span class="color">Get</span> In Touch.</p>
+            </div>
+
+            <div class="flex flex-wrap shadow-2xl rounded-2xl overflow-hidden bg-white">
+                <div class="w-full md:w-7/12 p-8 md:p-12">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Message Me</h3>
+                    <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" placeholder="Name" class="contact-input" required>
+                            <input type="email" placeholder="Email" class="contact-input" required>
+                        </div>
+                        <input type="text" placeholder="Subject" class="contact-input mb-6" required>
+                        <textarea rows="5" placeholder="Message" class="contact-input mb-8" required></textarea>
+                        <button type="submit" class="px-10 py-3 bg-main text-white font-bold rounded-lg hover:opacity-90 transition transform hover:scale-105 shadow-md">Submit</button>
+                    </form>
+                </div>
+
+                <div class="w-full md:w-5/12 bg-gray-50 p-8 md:p-12 border-l border-gray-100 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-800">Contact Info</h3>
+
+                    <div class="flex items-center mb-8 group">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-white shadow-md rounded-full mr-4 text-[var(--main-color)] group-hover:bg-main group-hover:text-white transition duration-300">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Name</h4>
+                            <p class="text-gray-600">Suyog Shilkar</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mb-8 group">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-white shadow-md rounded-full mr-4 text-[var(--main-color)] group-hover:bg-main group-hover:text-white transition duration-300">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Location</h4>
+                            <p class="text-gray-600">Navi Mumbai, India</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mb-8 group">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-white shadow-md rounded-full mr-4 text-[var(--main-color)] group-hover:bg-main group-hover:text-white transition duration-300">
+                            <i class="fas fa-phone text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Call</h4>
+                            <p class="text-gray-600">+91 7770036393</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center group">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-white shadow-md rounded-full mr-4 text-[var(--main-color)] group-hover:bg-main group-hover:text-white transition duration-300">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Email</h4>
+                            <p class="text-gray-600 text-sm break-all">suyogshilkar67@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-900 text-white py-8 text-center border-t-4 border-main">
+        <div class="flex items-center justify-center gap-2 text-gray-400 text-sm">
+             <span class="text-lg">&copy;</span> Suyog Shilkar. All Rights Reserved.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
